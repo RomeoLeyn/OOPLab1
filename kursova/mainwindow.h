@@ -7,6 +7,8 @@
 #include<QSqlQuery>
 #include<QSqlTableModel>
 
+#include"classadd.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -18,6 +20,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void insertInfo(QString &name,QString &brand,QString &model,int &year,int &in_Stock,float &price,QString &category);
 
 private slots:
     void on_infoButton_clicked();
@@ -26,15 +29,19 @@ private slots:
 
     void on_tableView_clicked(const QModelIndex &index);
 
-    void on_tableView_iconSizeChanged(const QSize &size);
-
     void on_infoOfProgram_clicked();
+
+    void on_addButton_clicked();
+
 
 private:
     Ui::MainWindow *ui;
     QSqlDatabase db;
     QSqlQuery *query;
     QSqlTableModel *model;
+    ClassAdd *addWindow;
+
+
 
     int row;
 

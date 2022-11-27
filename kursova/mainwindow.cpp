@@ -33,10 +33,16 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
-void MainWindow::on_infoButton_clicked()
+void MainWindow::on_addButton_clicked()
 {
-    model->insertRow(model->rowCount());
+    addWindow = new ClassAdd;
+    addWindow->open();
+    addWindow->exec();
+}
+
+void MainWindow::insertInfo(QString &name, QString &brand, QString &model, int &year, int &in_Stock, float &price, QString &category)
+{
+
 }
 
 
@@ -55,4 +61,6 @@ void MainWindow::on_infoOfProgram_clicked()
 {
 
 }
+
+
 
