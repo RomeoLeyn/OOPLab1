@@ -23,7 +23,7 @@ public:
     void insertInfo(QString &name,QString &brand,QString &model,int &year,int &in_Stock,float &price,QString &category);
 
 private slots:
-    void on_infoButton_clicked();
+    //void on_infoButton_clicked();
 
     void on_deleteButton_clicked();
 

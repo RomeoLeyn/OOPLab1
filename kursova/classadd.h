@@ -3,7 +3,11 @@
 
 #include <QDialog>
 #include<qstring.h>
-#include<mainwindow.h>
+//#include<mainwindow.h>
+#include<QSqlDatabase>
+#include<QDebug>
+#include<QSqlQuery>
+#include<QSqlTableModel>
 
 namespace Ui {
 class ClassAdd;
@@ -30,6 +34,9 @@ private:
     int in_Stock;
     float price;
     QString catgory;
+    QSqlDatabase db;
+    QSqlQuery *query;
+    //QSqlTableModel *model;
 
 
 
